@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwindConfig.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Providerst List (Rejected)</title>
+</head>
+<body>
+    <section class="flex">
+
+        <div class="w-1/4 bg-sidebargrey h-screen overflow-y-hidden">
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--start SIDE NAV -->
+            <div class="flex h-1/8">
+              <div class="flex mx-auto">
+                <img src="../images/lighterLogo.png" class="object-contain h-24 mt-2" alt="">
+                <div class="flex flex-col mt-6 pb-5">
+                    <label class="text-4xl fontAdlamDisplay text-bubong" for="">At-Home</label>
+                    <label class="text-3xl fontAdlamDisplay text-bahay" for="">Convenience</label>
+                </div>
+              </div>
+                
+            </div>
+            <div class="bg-sidebargreen h-90%">
+                <div class="flex flex-col">
+                    <div class="flex mt-5">
+                        <div class="mx-auto">
+                            <label class="text-3xl fontAdlamDisplay text-white" for="">Welcome,</label><br>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="mx-auto">
+                            <label class="text-3xl fontAdlamDisplay text-white font-bold" for="">Admin</label><br>
+                        </div>
+                        
+                    </div>
+                    <div class="flex mt-5">
+                      <div class="mx-auto">
+                          <div class="container p-0.5 bg-white w-80 rounded-full"></div>
+                      </div>
+                    </div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+          <!--START CTA BUTTONS-->
+
+                    <div class="w-full mt-7 z-10">
+                      <div class="">
+                          <button class="w-full text-white text-2xl bg-black py-2 bg-sidebardark">Service Providers</button>
+                      </div>
+                    </div>
+                    <div class="w-full z-10">
+                      <div class="" id="rejectedListCustomerBtn">
+                          <button class="w-full text-white text-2xl bg-black py-2 bg-sidebargreen hover:bg-sidebardark">Customers</button>
+                      </div>
+                    </div>
+                    
+          <!--END CTA BUTTONS-->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+                    <div class="relative flex justify-center items-center">
+                        <div class="flex fixed bottom-0">
+                            <div class="flex">
+                                <div class="mx-auto">
+                                    <div class="flex">
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                      <!--start LOGOUT BUTTON-->
+                                        <div class="mb-5">
+                                            <label id="logoutBtn" class="text-3xl text-white hover:text-blue-400 hover:cursor-pointer" for=""><i class="fa fa-sign-out text-3xl mr-2"></i>Logout</label>
+                                        </div>
+                                      <!--end LOGOUT BUTTON-->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!--end SIDE NAV -->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
+        <div class="w-full bg-white h-full">
+            <div class="ml-28 mt-20">
+              <label for="" class="text-4xl font-bold">Service Providers</label>
+            </div>
+            <div class="flex mt-5">
+                <div class="w-1/2 place-content-start ml-36">
+                    <div class="flex mt-5">
+                      <div class="flex">
+                        <button id="pendingBtn" class="text-xl hover:text-blue-700 px-3 hover:border-blue-700 hover:border-b-2 mr-4">Pending</button>
+                        <div class="container border-neutral-500 border-l-2 h-7"></div>
+                        <button id="acceptedBtn" class="text-xl mr-4 ml-4 px-3 hover:text-blue-700 hover:border-blue-700 hover:border-b-2">Accepted</button>
+                        <div class="container border-neutral-500 border-l-2"></div>
+                        <button id="rejectedBtn" class="text-xl pl-5 text-blue-700 border-blue-700 border-b-2 px-3 ml-4">Rejected</button>
+                      </div>
+                    </div>
+                </div>
+
+
+                <div class="mt-1 ml-10 w-1/2">
+                    <div class="flex place-content-end mr-32">
+                        <span class="inline-flex items-center pl-3 text-sm border-2 border-r-0 border-black rounded-l-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                        </span>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--start SEARCHBOX-->
+                        <span>
+                            <input onkeyup="filterFunction()" type="text" id="searchBox" class="border-l-0 fontAdlamDisplay rounded-none rounded-r-lg border-2 border-black block flex-1 w-56 text-sm p-2.5" style="outline:none;" placeholder="Search">
+                        </span>
+                        <!--end SEARCHBOX-->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                        <div>
+                          <span class="w-10 mt-0.5 ml-3 block">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M28,9H11a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/><path d="M7,9H4A1,1,0,0,1,4,7H7A1,1,0,0,1,7,9Z"/><path d="M21,17H4a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z"/><path d="M11,25H4a1,1,0,0,1,0-2h7a1,1,0,0,1,0,2Z"/><path d="M9,11a3,3,0,1,1,3-3A3,3,0,0,1,9,11ZM9,7a1,1,0,1,0,1,1A1,1,0,0,0,9,7Z"/><path d="M23,19a3,3,0,1,1,3-3A3,3,0,0,1,23,19Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,23,15Z"/><path d="M13,27a3,3,0,1,1,3-3A3,3,0,0,1,13,27Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,13,23Z"/><path d="M28,17H25a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z"/><path d="M28,25H15a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g>
+                            </svg>
+                          </span>
+                          <select name="" id="typeList" onchange="filterByType()" class="absolute -mt-10 ml-2.5 py-2 px-2 bg-transparent noAppearance text-transparent">
+                            <option value="" class="text-white bg-filterbg hover:bg-filterhover">--Show all--</option>
+                            <option value="electrical" class="text-white bg-filterbg hover:bg-filterhover">ELECTRICAL</option>
+                            <option value="handyman" class="text-white bg-filterbg hover:bg-filterhover">HANDYMAN</option>
+                            <option value="bodyGroomer" class="text-white bg-filterbg hover:bg-filterhover">BODY GROOMER</option>
+                            <option value="plumber" class="text-white bg-filterbg hover:bg-filterhover">PLUMBER</option>
+                            <option value="cleaning" class="text-white bg-filterbg hover:bg-filterhover">CLEANING</option>
+                            <option value="technician" class="text-white bg-filterbg hover:bg-filterhover">TECHNICIAN</option>
+                            <option value="greenscaping" class="text-white bg-filterbg hover:bg-filterhover">GREENSCAPING</option>
+                            <option value="petCare" class="text-white bg-filterbg hover:bg-filterhover">PET CARE</option>
+                          </select>
+                        </div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                    </div>
+                </div>
+            </div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="flex flex-col mt-10">
+    <div class="flex overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block w-5/6 mx-auto  sm:px-6 lg:px-8">
+        <div class=" max-h-128 overflow-y-scroll border border-black">
+<!--start TABLE-->
+          <table id="tableListRejected" class="min-w-full  text-center text-sm font-light dark:border-neutral-500">
+            <thead class="  font-medium dark:border-neutral-500 ">
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+              <tr class="">
+                <th
+                  scope="col"
+                  class="hidden sticky z-50  -top-1  border-r px-6 py-4 dark:border-neutral-500 bg-lightmint">
+                  Type
+                </th>
+                <th
+                  scope="col"
+                  class="sticky z-50  -top-1  border-r px-6 py-4 dark:border-neutral-500 bg-lightmint">
+                  Name
+                </th>
+                <th
+                  scope="col"
+                  class="sticky z-50 -top-1   border-r px-6 py-4 dark:border-neutral-500 bg-lightmint">
+                  Address
+                </th>
+                <th
+                  scope="col"
+                  class="sticky z-50 -top-1   border-r px-6 py-4 dark:border-neutral-500 bg-lightmint">
+                  Contact Number
+                </th>
+                <th scope="col" class="sticky  z-50 -top-1  px-6 py-4 bg-lightmint">Action</th>
+              </tr>
+            </thead>
+            <tbody class="relative">
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->            
+              <!-- <tr class="border-b dark:border-neutral-500">
+                <td
+                  class="hidden whitespace-nowrap border-r px-6 py-4 font-medium dark:border-neutral-500">
+                  Plumber
+                </td>
+                <td
+                  class="whitespace-nowrap border-r px-6 py-4 font-medium dark:border-neutral-500">
+                  TWICE OT9 JIRIT rejected
+                </td>
+                <td
+                  class="whitespace-nowrap border-r px-6 py-4 font-medium dark:border-neutral-500">
+                  SOUTH SEOUL KOREA
+                </td>
+                <td
+                  class="whitespace-nowrap border-r px-6 py-4 font-medium dark:border-neutral-500">
+                  09999999999
+                </td>   
+              </tr> -->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+    </section>
+</body>
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyBs4Iaj6JbVltfTKDc9zckfbUPHJsj5Phs",
+    authDomain: "homeservice-8b483.firebaseapp.com",
+    projectId: "homeservice-8b483",
+    storageBucket: "homeservice-8b483.appspot.com",
+    messagingSenderId: "233738786559",
+    appId: "1:233738786559:web:d849877311dc5f2dcc5eca"
+  };
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="../js/landingPageJS.js"></script>
+<script src="../js/rejectedProviderList.js"></script>
+<script>
+  function filterFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("searchBox");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tableListRejected");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+  function filterByType() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("typeList");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tableListRejected");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+  </script>
+</html>

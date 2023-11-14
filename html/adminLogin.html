@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/tailwindConfig.js"></script>
+    <title>Login</title>
+</head>
+<body class="bg-lightmint">
+    <section>
+        <div class="mx-auto bg-lightmint mt-32 w-4/6 py-10 rounded-xl pb-24">
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                    <!--start LOGO AND TITLE -->
+            <div class="flex mx-auto">
+                <div class="mx-auto">
+                    <div class="flex">
+                        <img src="../images/lighterLogo.png" class="object-contain h-48 mx-auto" alt="">
+                        <div class="mt-12 ml-5">
+                            <label class="mt-6 text-7xl fontAdlamDisplay text-bubong" for="">At-Home</label>
+                            <br>
+                            <label class="mt-6 text-7xl fontAdlamDisplay text-bahay" for="">Convenience</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!--end LOGO AND TITLE -->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                    <!-- start ADMIN LOGIN LABEL -->
+            <div class="flex mx-auto">
+                <div class="mx-auto">
+                    <div class="flex">
+                        <div class="mt-12">
+                            <label class="mt-6 text-4xl fontAdlamDisplay text-bubong" for="">Admin Login</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!--end LOGO AND TITLE -->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                    <!--start USERNAME AND PASSWORD TEXTBOX-->
+            <div class="flex mx-auto">
+                <div class="mx-auto">
+                    <div class="flex">
+                        <div class="mt-12">
+                            <input id="usernameTextbox" type="text" class="w-64 p-2 rounded-md fontAdlamDisplay border-2 border-black px-6" placeholder="Username"></input><br>
+                            <input id="passwordTextbox" type="password" class="mt-5 w-64 p-2 rounded-md fontAdlamDisplay border-2 border-black px-6" placeholder="Password"></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                    <!--end USERNAME AND PASSWORD TEXTBOX-->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                    <!--start SUBMIT BUTTON-->
+            <div class="flex mx-auto">
+                <div class="mx-auto">
+                    <div class="flex">
+                        <div class="mt-7">
+                            <button id="submitBtn" class="w-40 bg-blue-500 rounded-full py-2 fontAdlamDisplay text-white hover:bg-blue-400">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <!--end SUBMIT BUTTON-->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        </div>
+    </section>
+</body>
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyBs4Iaj6JbVltfTKDc9zckfbUPHJsj5Phs",
+    authDomain: "homeservice-8b483.firebaseapp.com",
+    projectId: "homeservice-8b483",
+    storageBucket: "homeservice-8b483.appspot.com",
+    messagingSenderId: "233738786559",
+    appId: "1:233738786559:web:d849877311dc5f2dcc5eca"
+  };
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="../js/login.js"></script>
+</html>

@@ -1,0 +1,10 @@
+.fontAdlamDisplay{
+    font-family: 'ADLaM Display', cursive;
+}
+select.noAppearance {
+    -webkit-appearance: none;
+    outline: none;
+  }
+option:checked {
+    background-color: #3D595D;
+}
