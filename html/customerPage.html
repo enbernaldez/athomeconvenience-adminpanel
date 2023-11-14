@@ -1,260 +1,357 @@
 <!DOCTYPE html>
-<html lang="en" class="overflow-y-hidden overflow-x-hidden">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../js/tailwindConfig.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title id="titleTest">Customer Page</title>
-</head>
-<body class="">
-    <section class="flex overflow-y-hidden overflow-x-hidden">
-
-        <div class="w-1/4 bg-sidebargrey h-screen">
-            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-                    <!--start SIDE NAV -->
-                        <div class="flex h-1/8">
-                          <div class="flex mx-auto">
-                            <img src="../images/lighterLogo.png" class="object-contain h-24 mt-2" alt="">
-                            <div class="flex flex-col mt-6 pb-5">
-                                <label class="text-4xl fontAdlamDisplay text-bubong" for="">At-Home</label>
-                                <label class="text-3xl fontAdlamDisplay text-bahay" for="">Convenience</label>
-                            </div>
-                          </div>
-                            
+<html lang="en" 
+      class="overflow-y-hidden overflow-x-hidden">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" 
+              content="IE=edge">
+        <meta name="viewport" 
+              content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" 
+              href="https://fonts.googleapis.com">
+        <link rel="preconnect" 
+              href="https://fonts.gstatic.com" 
+              crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" 
+              rel="stylesheet">
+        <link rel="stylesheet" 
+              href="../css/style.css">
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="../js/tailwindConfig.js"></script>
+        <link rel="stylesheet" 
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title id="titleTest">
+            Customer Page</title>
+    </head>
+    <body class="">
+        <section class="flex overflow-y-hidden overflow-x-hidden">
+            <div class="w-1/4 bg-sidebargrey h-screen">
+                <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                <!--start SIDE NAV -->
+                <div class="flex h-1/8">
+                    <div class="flex mx-auto">
+                        <img src="../images/lighterLogo.png" 
+                             class="object-contain h-24 mt-2" alt="">
+                        <div class="flex flex-col mt-6 pb-5">
+                            <label class="text-4xl fontAdlamDisplay text-bubong" 
+                                   for="">
+                                At-Home
+                            </label>
+                            <label class="text-3xl fontAdlamDisplay text-bahay" 
+                                   for="">
+                                Convenience
+                            </label>
                         </div>
-                        <div class="bg-sidebargreen h-90%">
-                            <div class="flex flex-col">
-                                <div class="flex mt-5">
-                                    <div class="mx-auto">
-                                        <label class="text-3xl fontAdlamDisplay text-white" for="">Welcome,</label><br>
-                                    </div>
-                                </div>
+                    </div>
+
+                </div>
+                <div class="bg-sidebargreen h-90%">
+                    <div class="flex flex-col">
+                        <div class="flex mt-5">
+                            <div class="mx-auto">
+                                <label class="text-3xl fontAdlamDisplay text-white" 
+                                       for="">
+                                    Welcome,
+                                </label>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="mx-auto">
+                                <label class="text-3xl fontAdlamDisplay text-white font-bold" 
+                                       for="">
+                                    Admin
+                                </label>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="flex mt-5">
+                            <div class="mx-auto">
+                                <div class="container p-0.5 bg-white w-80 rounded-full"></div>
+                            </div>
+                        </div>
+                        <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                        <!--START CTA BUTTONS-->
+
+                        <div class="w-full mt-7 z-10">
+                            <div class="" id="prodiverButtonCustomer">
+                                <button class="w-full text-white text-2xl bg-black py-2 bg-sidebargreen hover:bg-sidebardark">
+                                    Service Providers
+                                </button>
+                            </div>
+                        </div>
+                        <div class="w-full z-10">
+                            <div class="" 
+                                 id="customerButtonCustomer">
+                                <button class="w-full text-white text-2xl bg-black py-2 bg-sidebardark">
+                                    Customers
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--END CTA BUTTONS-->
+                        <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+                        <div class="relative flex justify-center items-center">
+                            <div class="flex fixed bottom-0">
                                 <div class="flex">
                                     <div class="mx-auto">
-                                        <label class="text-3xl fontAdlamDisplay text-white font-bold" for="">Admin</label><br>
-                                    </div>
-                                    
-                                </div>
-                                <div class="flex mt-5">
-                                  <div class="mx-auto">
-                                      <div class="container p-0.5 bg-white w-80 rounded-full"></div>
-                                  </div>
-                                </div>
-            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-                      <!--START CTA BUTTONS-->
-            
-                                <div class="w-full mt-7 z-10">
-                                  <div class="" id="prodiverButtonCustomer">
-                                      <button class="w-full text-white text-2xl bg-black py-2 bg-sidebargreen hover:bg-sidebardark">Service Providers</button>
-                                  </div>
-                                </div>
-                                <div class="w-full z-10">
-                                  <div class="" id="customerButtonCustomer">
-                                      <button class="w-full text-white text-2xl bg-black py-2 bg-sidebardark">Customers</button>
-                                  </div>
-                                </div>
-                                
-                      <!--END CTA BUTTONS-->
-            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-            
-                                <div class="relative flex justify-center items-center">
-                                    <div class="flex fixed bottom-0">
                                         <div class="flex">
-                                            <div class="mx-auto">
-                                                <div class="flex">
-            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                  <!--start LOGOUT BUTTON-->
-                                                    <div class="mb-5">
-                                                        <label id="logoutBtn" class="text-3xl text-white hover:text-blue-400 hover:cursor-pointer" for=""><i class="fa fa-sign-out text-3xl mr-2"></i>Logout</label>
-                                                    </div>
-                                                  <!--end LOGOUT BUTTON-->
-            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-                                                </div>
+                                            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                            <!--start LOGOUT BUTTON-->
+                                            <div class="mb-5">
+                                                <label id="logoutBtn" 
+                                                       class="text-3xl text-white hover:text-blue-400 hover:cursor-pointer" 
+                                                       for="">
+                                                    <i class="fa fa-sign-out text-3xl mr-2"></i>
+                                                    Logout
+                                                </label>
                                             </div>
+                                            <!--end LOGOUT BUTTON-->
+                                            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
-                        </div>
-                    </div>
-    <!--end SIDE NAV -->
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-        <div class="w-full bg-white h-full overflow-y-scroll 2xl:overflow-y-hidden">
-            <div class="ml-10 mt-20">
-                <button id="backArrowCustomer"><i class="fa fa-solid fa-arrow-left text-blue-500 text-4xl hover:text-blue-700"></i></button>
-            </div>
-            <div class="flex mt-5">
-                <div class="w-1/2 place-content-start ml-10">
-                    <label id="customerName" for="" class="text-4xl fontAdlamDisplay">{CUSTOMER NAME}</label>
-                </div>
-                <div class="flex w-1/2 place-content-end">
-                    <div class="flex space-x-5 mr-20 hidden">
-                        <button id="rejectBtn" class="px-12 bg-bahay hover:bg-red-400 text-white font-bold rounded-full">REJECT</button>
-                        <button id="acceptBtn" class="px-12 bg-blue-500 hover:bg-blue-400 text-white font-bold rounded-full">ACCEPT</button>
+                        </div> 
                     </div>
                 </div>
             </div>
-        
-            <div class="flex flex-col mt-10 bg-gray-100 pt-10 px-16">
-                <div class="flex overflow-x-auto">
-                    <!--PROVIDER INFORMATION FLEX-->
-                    <div class="flex inline-block w-full mx-auto bg-gray-100 h-screen">
-                        <div class="w-2/3 w-full mt-10">
-                            <div class="flex w-full">
-                                <div class="w-1/6">
-                                    <span class="text-2xl">User Details</span>   
-                                </div>
-                                <div class="flex flex-col relative h-full w-5/6">
-                                    <div class="h-5 w-full border-b-2 border-black">
-                                    </div>
-                                    <div class="h-1/2 w-full">
-                                      
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-5">
-                                <div class="flex text-lg">
-                                    <div class="w-96 text-end pr-2 font-bold">
-                                        <label for="" >First Name:</label>
-                                    </div>
-                                    <div>
-                                        <label id="firstname" for="">...</label>
-                                    </div>
-                                </div>
-                                <div class="flex text-lg">
-                                    <div class="w-96 text-end pr-2 font-bold">
-                                        <label for="" >Last Name:</label>
-                                    </div>
-                                    <div>
-                                        <label id="lastname" for="">...</label>
-                                    </div>
-                                </div>
-                                <div class="flex text-lg">
-                                    <div class="w-96 text-end pr-2 font-bold">
-                                        <label for="" >Phone Number:</label>
-                                    </div>
-                                    <div>
-                                        <label id="phonenumber" for="">...</label>
-                                    </div>
-                                </div>
-                                <div class="flex text-lg">
-                                    <div class="w-96 text-end pr-2 font-bold">
-                                        <label for="" >Address:</label>
-                                    </div>
-                                    <div>
-                                        <label id="address" for="">...</label>
-                                    </div>
-                                </div>
-                                <div class="flex text-lg">
-                                    <div class="w-96 text-end pr-2 font-bold">
-                                        <label for="" >Email Address:</label>
-                                    </div>
-                                    <div>
-                                        <label id="email" for="">...</label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-
-                            <div class="flex w-full mt-20 hidden">
-                                <div class="w-1/6">
-                                    <span class="text-2xl">User Details</span>   
-                                </div>
-                                <div class="flex flex-col relative h-full w-5/6">
-                                    <div class="h-5 w-full border-b-2 border-black">
-                                
-                                    </div>
-                                    <div class="h-1/2 w-full">
-                                      
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-20 hidden">
-                                <div class="flex text-lg">
-                                    <div class="w-96 text-end pr-2 font-bold">
-                                        <label for="" >First Name:</label>
-                                    </div>
-                                    <div>
-                                        <label id="firstname" for="">...</label>
-                                    </div>
-                                </div>
-                                <div class="flex text-lg">
-                                    <div class="w-96 text-end pr-2 font-bold">
-                                        <label for="" >Last Name:</label>
-                                    </div>
-                                    <div>
-                                        <label id="lastname" for="">...</label>
-                                    </div>
-                                </div>
-                                <div class="flex text-lg">
-                                    <div class="w-96 text-end pr-2 font-bold">
-                                        <label for="" >Contact Number:</label>
-                                    </div>
-                                    <div>
-                                        <label id="contactnumber" for="">...</label>
-                                    </div>
-                                </div>
-                                <div class="flex text-lg">
-                                    <div class="w-96 text-end pr-2 font-bold">
-                                        <label for="" >Address:</label>
-                                    </div>
-                                    <div>
-                                        <label id="address" for="">...</label>
-                                    </div>
-                                </div>
-                                <div class="flex text-lg">
-                                    <div class="w-96 text-end pr-2 font-bold">
-                                        <label for="" >Email Address:</label>
-                                    </div>
-                                    <div>
-                                        <label id="emailaddress" for="">...</label>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <div class="w-1/2 hidden">
-                            <div class="ml-5">
-                                <span class="text-2xl">Uploaded file:</span>   
-                            </div>
-
-                            <div class="">
-                                <img src="../images/sample_businessPermit.png" class="w-96" alt="">
-                            </div>
+            <!--end SIDE NAV -->
+            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <div class="w-full bg-white h-full overflow-y-scroll 2xl:overflow-y-hidden">
+                <div class="ml-10 mt-20">
+                    <button id="backArrowCustomer">
+                        <i class="fa fa-solid fa-arrow-left text-blue-500 text-4xl hover:text-blue-700"></i>
+                    </button>
+                </div>
+                <div class="flex mt-5">
+                    <div class="w-1/2 place-content-start ml-10">
+                        <label id="customerName" 
+                               for="" 
+                               class="text-4xl fontAdlamDisplay">
+                            {CUSTOMER NAME}
+                        </label>
+                    </div>
+                    <div class="flex w-1/2 place-content-end">
+                        <div class="flex space-x-5 mr-20 hidden">
+                            <button id="rejectBtn" 
+                                    class="px-12 bg-bahay hover:bg-red-400 text-white font-bold rounded-full">
+                                REJECT
+                            </button>
+                            <button id="acceptBtn" 
+                                    class="px-12 bg-blue-500 hover:bg-blue-400 text-white font-bold rounded-full">
+                                ACCEPT
+                            </button>
                         </div>
                     </div>
-                </div>    
-            </div>
-        </div>    
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-        
-    </section>
-</body>
-<script>
-    const firebaseConfig = {
-    apiKey: "AIzaSyBs4Iaj6JbVltfTKDc9zckfbUPHJsj5Phs",
-    authDomain: "homeservice-8b483.firebaseapp.com",
-    projectId: "homeservice-8b483",
-    storageBucket: "homeservice-8b483.appspot.com",
-    messagingSenderId: "233738786559",
-    appId: "1:233738786559:web:d849877311dc5f2dcc5eca"
-  };
-    firebase.initializeApp(firebaseConfig);
-</script>
-<script src="../js/customerPage.js"></script>
+                </div>
+
+                <div class="flex flex-col mt-10 bg-gray-100 pt-10 px-16">
+                    <div class="flex overflow-x-auto">
+                        <!--PROVIDER INFORMATION FLEX-->
+                        <div class="flex inline-block w-full mx-auto bg-gray-100 h-screen">
+                            <div class="w-2/3 w-full mt-10">
+                                <div class="flex w-full">
+                                    <div class="w-1/6">
+                                        <span class="text-2xl">
+                                            User Details
+                                        </span>   
+                                    </div>
+                                    <div class="flex flex-col relative h-full w-5/6">
+                                        <div class="h-5 w-full border-b-2 border-black">
+                                        </div>
+                                        <div class="h-1/2 w-full">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="flex text-lg">
+                                        <div class="w-96 text-end pr-2 font-bold">
+                                            <label for="">
+                                                First Name:
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label id="firstname" 
+                                                   for="">
+                                                ...
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-lg">
+                                        <div class="w-96 text-end pr-2 font-bold">
+                                            <label for="">
+                                                Last Name:
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label id="lastname" 
+                                                   for="">
+                                                ...
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-lg">
+                                        <div class="w-96 text-end pr-2 font-bold">
+                                            <label for="">
+                                                Phone Number:
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label id="phonenumber" for="">
+                                                ...
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-lg">
+                                        <div class="w-96 text-end pr-2 font-bold">
+                                            <label for="">
+                                                Address:
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label id="address" for="">
+                                                ...
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-lg">
+                                        <div class="w-96 text-end pr-2 font-bold">
+                                            <label for="">
+                                                Email Address:
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label id="email" 
+                                                   for="">
+                                                ...
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="flex w-full mt-20 hidden">
+                                    <div class="w-1/6">
+                                        <span class="text-2xl">
+                                            User Details
+                                        </span>   
+                                    </div>
+                                    <div class="flex flex-col relative h-full w-5/6">
+                                        <div class="h-5 w-full border-b-2 border-black"></div>
+                                        <div class="h-1/2 w-full"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-20 hidden">
+                                    <div class="flex text-lg">
+                                        <div class="w-96 text-end pr-2 font-bold">
+                                            <label for="">
+                                                First Name:
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label id="firstname" 
+                                                   for="">
+                                                ...
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-lg">
+                                        <div class="w-96 text-end pr-2 font-bold">
+                                            <label for="">
+                                                Last Name:
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label id="lastname" 
+                                                   for="">
+                                                ...
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-lg">
+                                        <div class="w-96 text-end pr-2 font-bold">
+                                            <label for="">
+                                                Contact Number:
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label id="contactnumber" 
+                                                   for="">
+                                                ...
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-lg">
+                                        <div class="w-96 text-end pr-2 font-bold">
+                                            <label for="">
+                                                Address:
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label id="address" 
+                                                   for="">
+                                                ...
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-lg">
+                                        <div class="w-96 text-end pr-2 font-bold">
+                                            <label for="">
+                                                Email Address:
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label id="emailaddress" 
+                                                   for="">
+                                                ...
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="w-1/2 hidden">
+                                <div class="ml-5">
+                                    <span class="text-2xl">
+                                        Uploaded file:
+                                    </span>   
+                                </div>
+
+                                <div class="">
+                                    <img src="../images/sample_businessPermit.png" 
+                                         class="w-96" 
+                                         alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>    
+            <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        </section>
+    </body>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBs4Iaj6JbVltfTKDc9zckfbUPHJsj5Phs",
+            authDomain: "homeservice-8b483.firebaseapp.com",
+            projectId: "homeservice-8b483",
+            storageBucket: "homeservice-8b483.appspot.com",
+            messagingSenderId: "233738786559",
+            appId: "1:233738786559:web:d849877311dc5f2dcc5eca"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="../js/customerPage.js"></script>
 </html>
